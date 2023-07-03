@@ -85,8 +85,8 @@ type CardProps = {
 };
 
 function FavoritesCards() {
-  const favoritesList = useRecoilValue(FavoritesAtom);
-  const [_, setFavorites] = useRecoilState(FavoritesAtom);
+  const favoritesList = useRecoilValue(FavoritesAtom as any);
+  const [_, setFavorites] = useRecoilState(FavoritesAtom as any);
 
   const [allCards, setAllCards] = useState([] as any);
 
@@ -100,7 +100,7 @@ function FavoritesCards() {
   };
 
   const updateFavorites = (arr: any[]) => {
-    const filteredCards = arr.filter(
+    const filteredCards: any[] = arr.filter(
       (item: CardProps) => item.isFavorited === true
     );
     setFavorites(filteredCards);

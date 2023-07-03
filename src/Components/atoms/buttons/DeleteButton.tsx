@@ -18,12 +18,14 @@ export const DeleteButtonEl = styled.button`
   }
 `;
 
-const Delete = styled.img`
-`;
+const Delete = styled.img``;
 
-export const DeleteButton = ({
-  onClick,
-}: React.MouseEventHandler<HTMLButtonElement>) => {
+type ButtonTypes = {
+  onClick: () => void;
+}; 
+
+
+export const DeleteButton = ({ onClick }: ButtonTypes) => {
   return (
     <DeleteButtonEl onClick={onClick}>
       <Delete src="Delete.svg" alt="Like" />

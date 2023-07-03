@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { ScrollButton } from "../Components/atoms/buttons/ScrollButton";
 import { Header } from "../Components/organisms/Header";
 import { FrontSection } from "../Components/templates/FrontSection";
 import { Cards } from "../Components/organisms/Cards";
 import { TitleContainer } from "../Components/molecules/TitleContainer";
 import { SliderContainer } from "../Components/molecules/SliderContainer";
-import { css, styled } from "styled-components";
 import { Slider } from "../Components/atoms/Slider";
 
 

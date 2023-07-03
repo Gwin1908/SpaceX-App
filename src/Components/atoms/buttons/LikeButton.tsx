@@ -23,9 +23,11 @@ const Like = styled.img`
   }
 `;
 
-export const LikeButton = ({
-  onClick,
-}: React.MouseEventHandler<HTMLButtonElement>) => {
+type ButtonTypes = {
+  onClick?: () => void;
+};
+
+export const LikeButton = ({ onClick }: ButtonTypes) => {
   return (
     <LikeButtonEl onClick={onClick}>
       <Like src="heart.svg" alt="Like" />

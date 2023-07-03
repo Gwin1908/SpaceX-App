@@ -199,7 +199,6 @@ export const Cards = forwardRef<HTMLDivElement>((props, ref) => {
 
   useEffect(() => {
     !!allCards && setListedCards(allCards);
-    setFavorites();
   }, [allCards, firstCard]);
 
   return !!RocketsData.data && RocketsData.data ? (
