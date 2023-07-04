@@ -1,6 +1,6 @@
 import { css, styled } from "styled-components";
 
-export const Slider = styled.button`
+export const Slider = styled.button<{ active: boolean }>`
   background: transparent;
   border: 1px solid#fff;
   border-radius: 50%;
