@@ -4,9 +4,8 @@ import { Header } from "../Components/organisms/Header";
 import { FrontSection } from "../Components/templates/FrontSection";
 import { Cards } from "../Components/organisms/Cards";
 import { TitleContainer } from "../Components/molecules/TitleContainer";
-import { SliderContainer } from "../Components/molecules/SliderContainer";
+import { BackgroundSliderContainer } from "../Components/molecules/BackgroundSliderContainer";
 import { Slider } from "../Components/atoms/Slider";
-
 
 function Home() {
   const cardsRef = useRef<null | HTMLDivElement>(null);
@@ -22,7 +21,7 @@ function Home() {
           text="The space is waiting for"
         />
         <TitleContainer margin="0 167px 129px " fontSize="310px" text="You" />
-        <SliderContainer>
+        <BackgroundSliderContainer>
           <Slider
             onClick={() => setSlideNumber(1)}
             active={slideNumber === 1}
@@ -35,7 +34,7 @@ function Home() {
             onClick={() => setSlideNumber(3)}
             active={slideNumber === 3}
           />
-        </SliderContainer>
+        </BackgroundSliderContainer>
         <ScrollButton
           text="Explore tours"
           onClick={() =>

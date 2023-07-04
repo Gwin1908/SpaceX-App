@@ -7,6 +7,8 @@ import { ButtonRight } from "../atoms/buttons/ButtonRight";
 import { ButtonLeft } from "../atoms/buttons/ButtonLeft";
 import { useRecoilState } from "recoil";
 import { FavoritesAtom } from "../../Recoil/atom/FavoritesAtom";
+import { CardsSliderContainer } from "../molecules/CardsSliderContainer";
+import { Slider } from "../atoms/Slider";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -212,25 +214,31 @@ export const Cards = forwardRef<HTMLDivElement>((props, ref) => {
           </ButtonContainer>
         </CardsHeader>
         <CardsContainer>
-          {shownCards.map(
-            ({ id, description, name, image }: CardProps) => (
-              <Card key={id}>
-                <CardImg src={`${image}`} />
-                <CardTitle>{name}</CardTitle>
-                <CardText>{trimStr(description)}</CardText>
-                <CardButtons>
-                  <BuyButton>Buy</BuyButton>
-                  <LikeButton
-                    onClick={() => {
-                      changeFavorite(id);
-                      updateFavorites();
-                    }}
-                  />
-                </CardButtons>
-              </Card>
-            )
-          )}
+          {shownCards.map(({ id, description, name, image }: CardProps) => (
+            <Card key={id}>
+              <CardImg src={`${image}`} />
+              <CardTitle>{name}</CardTitle>
+              <CardText>{trimStr(description)}</CardText>
+              <CardButtons>
+                <BuyButton>Buy</BuyButton>
+                <LikeButton
+                  onClick={() => {
+                    changeFavorite(id);
+                    updateFavorites();
+                  }}
+                />
+              </CardButtons>
+            </Card>
+          ))}
         </CardsContainer>
+        <CardsSliderContainer>
+          <Slider onClick={() => setFirstCard(0)} active={firstCard === 0} />
+          <Slider
+            onClick={() => console.log("limited amount of cards")}
+            active={firstCard === 3}
+          />
+          <Slider onClick={() => setFirstCard(1)} active={firstCard === 1} />
+        </CardsSliderContainer>
       </CardsSection>
     </Wrapper>
   ) : (

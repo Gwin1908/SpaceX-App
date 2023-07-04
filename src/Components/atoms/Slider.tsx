@@ -17,11 +17,11 @@ export const Slider = styled.button<{ active: boolean }>`
           &::after {
             content: "";
             position: absolute;
-            top: 4px;
-            left: 4px;
+            top: 5px;
+            left: 5px;
             background-color: #fff;
-            height: 13px;
-            width: 13px;
+            height: 12px;
+            width: 12px;
             border-radius: 50%;
           }
         `
