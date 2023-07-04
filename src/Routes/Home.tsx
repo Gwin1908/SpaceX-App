@@ -15,6 +15,13 @@ function Home() {
   return (
     <main>
       <FrontSection $background={`url(back${slideNumber}.png)`}>
+        <Header />
+        <TitleContainer
+          margin="232px auto 0 "
+          fontSize="48px"
+          text="The space is waiting for"
+        />
+        <TitleContainer margin="0 167px 129px " fontSize="310px" text="You" />
         <SliderContainer>
           <Slider
             onClick={() => setSlideNumber(1)}
@@ -29,13 +36,6 @@ function Home() {
             active={slideNumber === 3}
           />
         </SliderContainer>
-        <Header />
-        <TitleContainer
-          margin="232px auto 0 "
-          fontSize="48px"
-          text="The space is waiting for"
-        />
-        <TitleContainer margin="0 auto 129px " fontSize="310px" text="You" />
         <ScrollButton
           text="Explore tours"
           onClick={() =>

@@ -24,9 +24,10 @@ const Container = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  margin: 0 652px 33px 585px;
 `;
 
 const Icon = styled.img`
